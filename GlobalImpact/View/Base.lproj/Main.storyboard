@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Impact View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImpactViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WaE-qw-V3f">
+                                <rect key="frame" x="0.0" y="20" width="375" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="58S-aL-54U"/>
+                                </constraints>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gux-LL-f4d">
+                                <rect key="frame" x="0.0" y="304" width="375" height="176"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-f9-Edg">
+                                <rect key="frame" x="108" y="237" width="159" height="30"/>
+                                <state key="normal" title="Animate to impact area"/>
+                                <connections>
+                                    <action selector="animateClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSc-g4-kC0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details about your imapct area that you are addressing in the sample" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVN-BU-3Zt">
+                                <rect key="frame" x="16" y="499" width="343" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="8BQ-yb-kPH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cVN-BU-3Zt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2Oy-Va-YAW"/>
+                            <constraint firstItem="WaE-qw-V3f" firstAttribute="trailing" secondItem="Gux-LL-f4d" secondAttribute="trailing" id="6M1-VH-Efk"/>
+                            <constraint firstItem="cVN-BU-3Zt" firstAttribute="top" secondItem="Gux-LL-f4d" secondAttribute="bottom" constant="19" id="C2s-vp-J13"/>
+                            <constraint firstItem="WaE-qw-V3f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FSp-mP-d2m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cVN-BU-3Zt" secondAttribute="bottom" constant="98" id="Kzx-o2-gBL"/>
+                            <constraint firstItem="F4V-f9-Edg" firstAttribute="centerX" secondItem="Gux-LL-f4d" secondAttribute="centerX" id="NUV-Ke-dAe"/>
+                            <constraint firstItem="WaE-qw-V3f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ose-04-MXw"/>
+                            <constraint firstItem="F4V-f9-Edg" firstAttribute="top" secondItem="WaE-qw-V3f" secondAttribute="bottom" constant="51" id="P8n-qQ-r2E"/>
+                            <constraint firstItem="Gux-LL-f4d" firstAttribute="top" secondItem="F4V-f9-Edg" secondAttribute="bottom" constant="37" id="Qcc-p2-pcL"/>
+                            <constraint firstAttribute="trailing" secondItem="WaE-qw-V3f" secondAttribute="trailing" id="gDV-op-QjY"/>
+                            <constraint firstItem="Gux-LL-f4d" firstAttribute="centerX" secondItem="cVN-BU-3Zt" secondAttribute="centerX" id="iH6-dI-mSa"/>
+                            <constraint firstItem="WaE-qw-V3f" firstAttribute="leading" secondItem="Gux-LL-f4d" secondAttribute="leading" id="ip6-Ba-cLx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="impactImage" destination="Gux-LL-f4d" id="LeV-tR-h7k"/>
+                        <outlet property="mapView" destination="WaE-qw-V3f" id="Drw-Xp-px3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
